@@ -1,1 +1,133 @@
-LOLOLOLOLOLOLOLO
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>5566pol的小站</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/snow.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <!-- 背景视频开始 -->
+        <video id="bgvideo" autoplay loop muted playsinline>
+            <source src="assets/video/bg.mp4" type="video/mp4">
+            <!-- 可添加 webm/ogg 格式 -->
+        </video>
+        <!-- 背景视频结束 -->
+        <div id="overlay"></div>
+        <div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Welcome!</h1>
+						<p>欢迎来到5566pol的小破站</p>
+						<link rel="icon" type="image/png" href="assets/images/favicon.png">
+						<nav>
+							<ul>
+								<li>
+  <a href="https://x.com/5566pol" title="Twitter">
+    <img src="assets/images/X.png" alt="Twitter" style="width:64px;height:64px;vertical-align:middle;">
+    <span class="label">Twitter</span>
+  </a>
+</li>
+								<li>
+  <a href="https://t.me/c5566pol" title="Telegram">
+    <img src="assets/images/telegram.png" alt="Telegram" style="width:64px;height:64px;vertical-align:middle;">
+    <span class="label">Telegram</span>
+  </a>
+</li>
+								<li>
+  <a href="https://space.bilibili.com/3493259980573057" title="bilibili">
+    <img src="assets/images/bilibili.png" alt="bilibili" style="width:64px;height:64px;vertical-align:middle;">
+    <span class="label">bilibili</span>
+  </a>
+</li>
+								<li>
+  <a href="https://github.com/5566pol" title="Github">
+    <img src="assets/images/github.png" alt="Github" style="width:64px;height:64px;vertical-align:middle;">
+    <span class="label">Github</span>
+  </a>
+</li>
+								<li>
+  <a href="https://qm.qq.com/q/NkutizLb4A" title="QQ">
+    <img src="assets/images/qq.png" alt="QQ" style="width:64px;height:64px;vertical-align:middle;">
+    <span class="label">QQ</span>
+  </a>
+</li>
+<li>
+  <a href="https://steamcommunity.com/id/5566pol/" title="Steam">
+    <img src="assets/images/steam.png" alt="Steam" style="width:64px;height:64px;vertical-align:middle;">
+    <span class="label">Steam</span>
+  </a>
+</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+<footer id="footer">
+    <span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+    <br>
+    <span>Icons from <a href="https://igoutu.cn" target="_blank">igoutu.cn</a></span>
+</footer>
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+			function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.className = 'snowflake';
+    snowflake.textContent = '❄';
+    snowflake.style.left = Math.random() * window.innerWidth + 'px';
+    snowflake.style.fontSize = (Math.random() * 16 + 16) + 'px';
+    snowflake.style.opacity = Math.random();
+    snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    document.body.appendChild(snowflake);
+    setTimeout(() => {
+        snowflake.remove();
+    }, 5000);
+}
+setInterval(createSnowflake, 200);
+		</script>
+		<!-- 在</body>前添加通知栏容器 -->
+<div id="noti" class="noti"></div>
+<script>
+function showNoti(msg) {
+    const noti = document.getElementById('noti');
+    noti.textContent = msg;
+    noti.classList.add('show');
+    setTimeout(() => {
+        noti.classList.remove('show');
+    }, 3000);
+}
+
+// 根据北京时间显示不同问候
+function getGreetingByBeijingTime() {
+    const now = new Date();
+    // 北京时间 = UTC+8
+    const bjHour = now.getUTCHours() + 8;
+    const hour = bjHour >= 24 ? bjHour - 24 : bjHour;
+    if (hour >= 6 && hour < 12) return "早上好，欢迎来到5566pol的小破站！";
+    if (hour >= 12 && hour < 14) return "中午好，欢迎来到5566pol的小破站！";
+    if (hour >= 14 && hour < 18) return "下午好，欢迎来到5566pol的小破站！";
+    if (hour >= 18 && hour < 24) return "晚上好，欢迎来到5566pol的小破站！";
+    return "凌晨好，欢迎来到5566pol的小破站！";
+}
+
+// 页面加载时弹出通知
+window.onload = function() {
+    document.body.classList.remove('is-preload');
+    showNoti(getGreetingByBeijingTime());
+}
+</script>
+	</body>
+</html>
